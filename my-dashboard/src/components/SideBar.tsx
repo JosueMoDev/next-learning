@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { IoBrowsersOutline, IoCalculator, IoLogoReact } from 'react-icons/io5';
+import { IoBrowsersOutline, IoCalculator, IoFootball, IoLogoReact } from 'react-icons/io5';
 import { SideBarMenuItem } from "./SideBarMenuItem";
 
 const menuItems = [
@@ -14,7 +14,13 @@ const menuItems = [
     icon: <IoCalculator size={40} />,
     title: 'Counter',
     subTitle: 'Clien Side Counter'
-  }
+  },
+  {
+    path: '/dashboard/pokemons',
+    icon: <IoFootball size={40} />,
+    title: 'Pokemons',
+    subTitle: 'Generación Estática'
+  },
 ];
 export const SideBar = () => {
   return (

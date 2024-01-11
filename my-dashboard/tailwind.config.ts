@@ -8,6 +8,8 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{html,js}',
     './components/**/*.{html,js}',
+    './src/pokemons/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/shopping-cart/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
