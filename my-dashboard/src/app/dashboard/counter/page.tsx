@@ -1,15 +1,19 @@
-import { CarCounter } from "@/shopping-cart";
+import {
+  FavoritePokemons,
+} from "@/pokemons";
 
 export const metadata = {
-  title: "Shopping Cart",
-  description: "Un simple contador",
+  title: "Favoritos",
+  description: "Ad minim sit cupidatat culpa consectetur.",
 };
 
-export default function CounterPage() {
+export default async function PokemonsPage() {
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full">
-      <span>Productos en el carrito</span>
-      <CarCounter value={20} />
+    <div className="flex flex-col">
+      <span className="text-5xl my-2">
+        Pokémons Favoritos <small className="text-blue-500">Global State</small>
+      </span>
+      <FavoritePokemons />
     </div>
   );
 }

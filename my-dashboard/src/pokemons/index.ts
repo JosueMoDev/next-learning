@@ -1,3 +1,4 @@
-export * from './components/pokemonCard';
-export * from './components/pokemonGridd';
+export * from './components/FavoritePokemos';
+export * from './components/PokemonCard';
+export * from './components/PokemonGrid';
 export * from './intefaces';
