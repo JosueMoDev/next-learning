@@ -11,6 +11,7 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
 import './slideshow.css';
+import { ProductImage } from '@/components';
 
 
 
@@ -26,39 +27,31 @@ export const ProductMobileSlideshow = ( { images, title, className }: Props ) =>
 
 
   return (
-    <div className={ className }>
-
+    <div className={className}>
       <Swiper
         style={{
-          width: '100vw',
-          height: '500px'
+          width: "100vw",
+          height: "500px",
         }}
         pagination
         autoplay={{
-          delay: 2500
+          delay: 2500,
         }}
-        modules={ [ FreeMode, Autoplay, Pagination ] }
+        modules={[FreeMode, Autoplay, Pagination]}
         className="mySwiper2"
       >
-
-        {
-          images.map( image => (
-            <SwiperSlide key={ image }>
-              <Image
-                width={ 600 }
-                height={ 500 }
-                src={ `/products/${ image }` }
-                alt={ title }
-                className="object-fill"
-              />
-            </SwiperSlide>
-
-          ) )
-        }
+        {images.map((image) => (
+          <SwiperSlide key={image}>
+            <ProductImage
+              src={image}
+              width={600}
+              height={500}
+              alt={title}
+              className="mr-5 rounded"
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
-
-
-
     </div>
   );
 };
